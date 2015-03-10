@@ -8,7 +8,7 @@ $(document).ready(function(){
 /*cargar categorias de seguro*/
 function cargaCategoriasSeguro(){
 	var idtipo = $('#use_type_id option:selected').val();
-	var page = "/ruska/public/listarCategoriasSeguro/" + idtipo;
+	var page = "/listarCategoriasSeguro/" + idtipo;
 	if(idtipo !=''){
 		$.get(page, function(data){
 			console.log(data);

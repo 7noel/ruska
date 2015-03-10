@@ -38,7 +38,7 @@ $(document).ready(function(){
 /*cargar categorias de seguro*/
 function cargaCategoriasSeguro(){
 	var idtipo = $('#use_type_id option:selected').val();
-	var page = "/ruska/public/listarCategoriasSeguro/" + idtipo;
+	var page = "/listarCategoriasSeguro/" + idtipo;
 	if(idtipo !=''){
 		$.get(page, function(data){
 			$('#insurance_category_id').empty();
@@ -59,7 +59,7 @@ function cargaCategoriasSeguro(){
 function seleccionarSeguro(){
 	var modelo = $('#model_id option:selected').val();
 	var uso = $('#use_type_id option:selected').val();
-	var page = "/ruska/public/seleccionarSeguro/" + modelo + "/" + uso;
+	var page = "/seleccionarSeguro/" + modelo + "/" + uso;
 	if(modelo !='' && uso==1){
 		$.get(page, function(data){
 			$("#insurance_category_id option[value="+ data +"]").attr("selected",true);
@@ -76,7 +76,7 @@ function seleccionarSeguro(){
 function calcularTasa(){
 	var seguro = $('#insurance_category_id option:selected').val();
 	var year = $('#year option:selected').val();
-	var page = "/ruska/public/getRate/" + seguro + "/" + year;
+	var page = "/getRate/" + seguro + "/" + year;
 	if(seguro != '' && year != ''){
 		$.get(page, function(data){
 			$('#rate').val(data);
@@ -87,7 +87,7 @@ function calcularTasa(){
 function calcularPrima(){
 	var seguro = $('#insurance_category_id option:selected').val();
 	var year = $('#year option:selected').val();
-	var page = "/ruska/public/getPmin/" + seguro + "/" + year;
+	var page = "/getPmin/" + seguro + "/" + year;
 	var valor = $('#value').val();
 	var rate = $('#rate').val();
 	var factor = $('#factor').val();

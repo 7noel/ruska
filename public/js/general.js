@@ -41,7 +41,7 @@ $(document).ready(function(){
 /*cargar provincias*/
 function cargaProvincias(){
 	var idDepartamento = $('#lstDepartamento option:selected').val();
-	var page ="/ruska/public/listarProvincias/" + idDepartamento;
+	var page ="/listarProvincias/" + idDepartamento;
 	if(idDepartamento != ''){
 		$.get(page, function(data){
 			$('#lstProvincia').empty();
@@ -58,7 +58,7 @@ function cargaProvincias(){
 function cargaDistritos(){
 	var idDepartamento = $('#lstDepartamento option:selected').val();
 	var rel=$('#lstProvincia option:selected').val();
-	var page = "/ruska/public/listarDistritos/" + idDepartamento + "/" +rel;
+	var page = "/listarDistritos/" + idDepartamento + "/" +rel;
 	if(rel !=''){
 		$.get(page, function(data){
 			console.log(data);
@@ -74,7 +74,7 @@ function cargaDistritos(){
 /*cargar modelos*/
 function cargaModelos(){
 	var id = $('#brand_id option:selected').val();
-	var page = "/ruska/public/listarModelos/" + id;
+	var page = "/listarModelos/" + id;
 	if(id !=''){
 		$.get(page, function(data){
 			console.log(data);

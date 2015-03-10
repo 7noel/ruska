@@ -2,12 +2,12 @@
 	color: blue;
 }
 .ruska-logo{
-	background: url("/ruska/public/images/ruska.png") no-repeat;
+	background: url("/images/ruska.png") no-repeat;
 	width: 200px;
 	border: 0px;
 }
 body{
-	background: url("/ruska/public/images/fondo.jpg") no-repeat center center fixed;
+	background: url("/images/fondo.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 h2{
