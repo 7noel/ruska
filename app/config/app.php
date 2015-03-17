@@ -125,6 +125,7 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Anouar\Fpdf\FpdfServiceProvider',
+        'Thujohn\Pdf\PdfServiceProvider',
 		//custom
 		'Sales\Components\FieldServiceProvider',
 
@@ -197,6 +198,8 @@ return array(
 		
 		//FPDF
 		'Fpdf'				=> 'Anouar\Fpdf\Fpdf',
+        'PDF' => 'Thujohn\Pdf\PdfFacade',
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 		//custom
 		'Field'				=>	'Sales\Components\Field',
